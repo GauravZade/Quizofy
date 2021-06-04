@@ -1,0 +1,539 @@
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    html::-webkit-scrollbar {
+        display: none;
+    }
+    
+    body {
+        position: relative;
+        background-image: url('images/background.jpg');
+        margin: 0;
+        padding: 0;
+    }
+    /*main page*/
+    
+    .main-page {
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: cover;
+        user-select: none;
+    }
+    
+    #lets-go {
+        position: absolute;
+        top: 80%;
+        left: 13%;
+        color: white;
+        font-family: 'Spartan', sans-serif;
+        font-size: 45px;
+    }
+    
+    .tab.active {
+        border: 2px solid white;
+    }
+    
+    #scroll-icon {
+        position: absolute;
+        top: 82%;
+        left: 10.4%;
+        width: 10px;
+        height: 100px;
+        background-color: red;
+        clip-path: inset(0 0 99% 0);
+        animation: scrollDown 2s infinite;
+    }
+    
+    @keyframes scrollDown {
+        0% {
+            clip-path: inset(0 0 100% 0);
+        }
+        100% {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+    
+    .quizofy {
+        position: absolute;
+        font-size: 100px;
+        text-align: left;
+        top: 50%;
+        left: 10%;
+        font-family: 'Limelight', cursive;
+        color: white;
+        text-shadow: 8px 8px 20px black;
+    }
+    
+    #text {
+        position: absolute;
+        text-align: left;
+        top: 60%;
+        left: 10.2%;
+        font-family: 'Spartan', sans-serif;
+        color: white;
+        font-size: 45px;
+    }
+    
+    #textext {
+        position: absolute;
+        text-align: left;
+        top: 73%;
+        left: 10.4%;
+        font-family: 'Spartan', sans-serif;
+        color: white;
+        font-size: 25px;
+    }
+    
+    .top-bar {
+        position: relative;
+        width: 100%;
+        height: 5%;
+        top: 5%;
+        background: none;
+        color: white;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        position: fixed;
+        z-index: 99;
+    }
+    
+    .right-side {
+        position: absolute;
+        right: 3%;
+        font-family: 'Montserrat', sans-serif;
+        padding: 0 30px;
+    }
+    
+    .right-side span {
+        padding: 0 20px;
+    }
+    
+    #small-logo {
+        border: 2px solid white;
+        margin-left: 5%;
+        padding: 5px;
+        font-size: 25px;
+    }
+    /*category*/
+    
+    .container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(90, 90, 90, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        user-select: none;
+        z-index: 11;
+    }
+    
+    .outer-card {
+        position: relative;
+        margin: 0 50px;
+        width: 350px;
+        height: 450px;
+    }
+    
+    ul {
+        type: none;
+    }
+    
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+        box-shadow: 5px 5px 10px rgb(0, 0, 0);
+        border: 1px solid white;
+    }
+    
+    .card {
+        text-align: center;
+        transform: scale(0);
+        transition: 1s;
+        padding-top: 40%;
+        font-family: sans-serif;
+        font-size: 15px;
+        background-color: white;
+        border: 2px black;
+    }
+    
+    .overlay h1 {
+        position: absolute;
+        top: 30%;
+        font-size: 70px;
+        text-align: center;
+        left: 6%;
+        color: white;
+        cursor: pointer;
+    }
+    
+    #aptitude {
+        left: 11%;
+    }
+    
+    #verbal {
+        left: 20%;
+    }
+    
+    .card.active {
+        transform: scale(1);
+        transition: .5s ease;
+    }
+    
+    .card:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    /*questions*/
+    
+    .q {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: #252422;
+        user-select: none;
+    }
+    
+    .que h1 {
+        font-size: 30px;
+        font-family: 'Source Code Pro', monospace;
+        line-height: 35px;
+    }
+    
+    .que h3 {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .que {
+        line-height: 15px;
+        position: absolute;
+        clip-path: inset(0 100% 0 0);
+        color: white;
+    }
+    
+    .que-container {
+        position: absolute;
+        width: 70%;
+        height: 25%;
+        left: 15%;
+        right: 15%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .dot {
+        border: 2px solid white;
+    }
+    /*back button*/
+    
+    img {
+        position: absolute;
+        left: 30%;
+        top: 5%;
+        width: 60px;
+        height: auto;
+        border-radius: 90%;
+    }
+    /*options*/
+    
+    .opt-container {
+        position: absolute;
+        width: 70%;
+        height: 60%;
+        left: 15%;
+        right: 15%;
+        top: 30%;
+        clip-path: inset(0 100% 0 0);
+    }
+    
+    .opt {
+        left: 20%;
+        margin-left: 60px;
+        padding: 0 10px;
+        font-size: 50px;
+        font-weight: bolder;
+        font-family: 'Josefin Sans', sans-serif;
+        -webkit-text-stroke: white;
+    }
+    
+    .opt span {
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        border: 5px solid white;
+        left: 5px;
+        background-color: white;
+    }
+    
+    .dots-container {
+        position: absolute;
+        width: 100px;
+        height: 15px;
+        justify-content: center;
+        left: 45%;
+        display: flex;
+        padding: 0;
+        bottom: 5%;
+    }
+    
+    li {
+        width: 15px;
+        height: 10px;
+        background: transparent;
+        margin: 0 5px;
+        padding: 0;
+        border: 2px solid black;
+    }
+    
+    p {
+        -webkit-text-stroke-width: 1px;
+    }
+    
+    .opt:hover p {
+        color: white;
+    }
+    
+    .opt:hover span {
+        background-color: black;
+    }
+    /* on interact*/
+    
+    .hide {
+        display: none;
+    }
+    
+    .que.active {
+        clip-path: inset(0 0 0 0);
+        transition: 1s ease;
+    }
+    
+    .opt-container.active {
+        clip-path: inset(0 0 0 0);
+        transition: 1s ease;
+        transition-delay: .5s;
+    }
+    
+    .opt-container.stops {
+        user-select: none;
+    }
+    
+    .dot.active {
+        background-color: white;
+    }
+    
+    .opt.true {
+        background-color: green;
+        color: white;
+    }
+    
+    .opt.false {
+        background-color: red;
+        color: white;
+    }
+    
+    .bulb {
+        top: 63%;
+        left: 30%;
+        display: none;
+        width: 50px;
+        height: auto;
+    }
+    
+    .submit {
+        top: 50%;
+        left: 30%;
+        width: 50px;
+        height: auto;
+    }
+    
+    .bulb.active {
+        display: initial;
+    }
+    
+    .solution {
+        position: absolute;
+        padding-left: 1%;
+        left: 10%;
+        margin: 0;
+        width: 89%;
+        height: 100%;
+        background-color: rgb(255, 214, 102);
+        z-index: 9;
+        clip-path: inset(0 100% 0 0);
+        transition: 1s ease-in-out;
+    }
+    
+    .solution.active {
+        clip-path: inset(0 0 0 0);
+        transition: 1s ease-in-out;
+    }
+    
+    .button {
+        position: absolute;
+        bottom: 5%;
+        left: 30%;
+        border: 3px solid white;
+        background-color: transparent;
+        width: 15%;
+        height: 5%;
+        font-weight: bolder;
+        color: black;
+    }
+    
+    .p {
+        display: none;
+        font-size: 30px;
+        color: black;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 50px;
+    }
+    
+    .p.active {
+        display: contents;
+    }
+    
+    .opt-container.unclickable {
+        pointer-events: none;
+    }
+    
+    .score {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 36%;
+        left: 30%;
+        color: white;
+        text-align: center;
+        font-size: 45px;
+        align-items: center;
+    }
+    
+    .score::after {
+        content: 'Score';
+        color: rgb(185, 185, 185);
+        font-size: 15px;
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        font-family: sans-serif;
+    }
+    
+    .bar {
+        position: absolute;
+        width: 150px;
+        height: 100%;
+        background-color: #252422;
+        box-shadow: 2px 0 10px black;
+        z-index: 10;
+    }
+    
+    .result {
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: black;
+        color: gray;
+        z-index: 99;
+        float: right;
+        line-height: 150px;
+        user-select: none;
+        clip-path: inset(0 0 100% 0);
+        transition: 1s ease-in-out;
+    }
+    
+    .result.active {
+        clip-path: inset(0 0 0 0);
+    }
+    
+    #outof {
+        font-size: 50px;
+    }
+    
+    #your-score {
+        font-size: 30px;
+    }
+    
+    #result-name {
+        margin: 0;
+        width: 95%;
+        height: 10%;
+        text-align: left;
+        padding-left: 5%;
+        background-color: mediumspringgreen;
+        color: black;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 5px 5px black;
+    }
+    
+    .result-button-container {
+        position: absolute;
+        display: flex;
+        flex: content;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        height: 15%;
+        background-color: mediumspringgreen;
+        box-shadow: 0 -5px 10px black;
+    }
+    
+    .result-button {
+        position: block;
+        width: 150px;
+        height: 50px;
+        padding: 0;
+        margin: 0;
+        background-color: salmon;
+        box-shadow: 2px 2px 5px black;
+    }
+    
+    .score-container {
+        position: absolute;
+        right: 0;
+        width: 45%;
+        height: 75%;
+        text-align: center;
+    }
+    
+    #score {
+        font-size: 400px;
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+    
+    #score-percentage {
+        position: absolute;
+        left: 5%;
+        width: 40%;
+        height: 75%;
+        font-size: 300px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    
+    #score-percentage::after {
+        content: "%";
+        font-size: 200px;
+        color: gray;
+    }
