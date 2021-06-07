@@ -140,7 +140,7 @@
     }
     
     ul {
-        type: none;
+        list-style-type: none;
     }
     
     .overlay {
