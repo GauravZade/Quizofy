@@ -21,8 +21,9 @@
         user-select: none;
         
     }
-    a{
+    .mai-page a{
         text-decoration:none;
+        color:white;
 }
     #lets-go {
         position: absolute;
