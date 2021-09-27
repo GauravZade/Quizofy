@@ -19,8 +19,11 @@
         background-color: transparent;
         background-size: cover;
         user-select: none;
+        
     }
-    
+    a{
+        text-decoration:none;
+}
     #lets-go {
         position: absolute;
         top: 80%;
